@@ -44,11 +44,11 @@ function App() {
             </ul>
           </nav>
       </header>
-      <main className=' text-center p-20 px-10 dark:bg-gray-900 '>
-        <section>
-          <h1 className=' text-4xl text-green-500'>Saurav Singh</h1>
+      <main className='  text-center pt-10 sm:p-20 sm:px-10 dark:bg-gray-900 '>
+        <section className=' '>
+          <h1 className=' text-4xl text-green-500'>About Me</h1>
           <h1 className=' text-2xl mt-2 text-gray-900 dark:text-white'>Front-End Developer</h1>
-          <h1 className=' font-mono mt-2 dark:text-white '>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h1>
+          <h1 className=' font-mono mt-2 dark:text-white max-w-md m-auto'>Hi I'm Saurav, by day I'm a software engineer and by night I click heads for fun in video games.(Don't trust me? Turn on the dark mode😉)  </h1>
            <ul className=' flex justify-center items-center gap-16 mt-8'>
              <li className=' text-4xl text-gray-600'><a href='https://www.google.com'><GoMarkGithub /></a></li>
              <li className=' text-4xl text-gray-600'><a href='https://www.google.com'><AiFillLinkedin /></a></li>
@@ -60,23 +60,22 @@ function App() {
            </div>
            </section>
 
-           <section className=' mt-16 mb-16'>
+           <section className='  mt-16 mb-16'>
               <h1 className=' text-4xl mb-6  text-lime-500'>My Projects</h1>
               <div className=' md:flex gap-6 '>
                   {projectData.map(e=>{
                      return( <a href={e.link} key={e.title} target="blank" className=' w-auto h-auto md:w-1/3 p-10 mb-6 border shadow-2xl rounded-lg cursor-pointer transition ease-out delay-150 hover:scale-105 dark:border-lime-500 md:flex gap-6  flex flex-col ' >
                      <img  src={e.img} className=" rounded-lg md:min-w-40 outline  h-72 " />
-                      <p className=' dark:text-yellow-50 font-mono text-xl'>{e.title}</p>
+                      <p className=' dark:text-yellow-50 font-mono text-xl text-lime-500'>{e.title}</p>
                       </a>)
                     
                   })}
               </div>
            </section>
 
-
            <h1 className=' text-2xl dark:text-gray-100 font-mono'>Have some questions for me? Or want a 1v1 in game?</h1>
               <h1 className=' text-2xl dark:text-gray-100 font-mono'>Write here!</h1>
-           <section className=' md:flex justify-center mt-5 '>
+           <section className=' shadow-2xl md:flex justify-center mt-5 '>
               <form className='p-10  md:w-1/2   border dark:border-lime-400 rounded-lg shadow-2xl' action='https://formspree.io/f/xvoyqebk' method='POST' >
                 <label htmlFor='name' className='font-mono text-lg dark:text-yellow-50 '>Name</label>
                 <input className='mb-4 id="name"  w-full border rounded-xl p-2' type="text" placeholder='Your Name' name="username" autoComplete='off' required/>
